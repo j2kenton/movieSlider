@@ -14,7 +14,7 @@ const NavBar = ({ ...props }) => {
       item.index = index;
     });
     // we need up to 5 items, with the current one in the middle
-    /*const currentItem = list[props.index];
+    const currentItem = list[props.index];
     const previousItems = list.slice(0, props.index);
     const nextItems = list.slice(props.index + 1, list.length);
     let nonCurrentItems = nextItems.concat(previousItems);
@@ -32,8 +32,8 @@ const NavBar = ({ ...props }) => {
         }
       }
     }
-*/
-    return props.data.map((value) => {
+
+    return allItems.map((value) => {
       const isActive = value.index === props.index;
       let orderValue = value.index;
       if (value.index < (props.index - 2)){
@@ -44,13 +44,12 @@ const NavBar = ({ ...props }) => {
       }
       const className = (isActive) ? "active" : "inactive";
 
-      const translateValue = (props.index) * -100;
+      const translateValue = (props.index) * -20;
 
       const styles = {
-        // backgroundImage: `url(${props.properties.imageUrl})`,
         transform: `translateX(${translateValue}%)`,
-        order: orderValue
-      };
+        // order: orderValue
+      };  
 
       return (
         <div key={value.index} className={className} onClick={() => setIndex(value.index)} style={styles}>{value.name}</div>
