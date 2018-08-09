@@ -13,25 +13,6 @@ const Carousel = ({ ...props }) => {
     list.forEach(function(item, index){
       item.index = index;
     });
-    // we need up to 5 items, with the current one in the middle
-    const currentItem = list[props.index];
-    const previousItems = list.slice(0, props.index);
-    const nextItems = list.slice(props.index + 1, list.length);
-    let nonCurrentItems = nextItems.concat(previousItems);
-    // let allItems = [currentItem];
-    const itemsLength = nonCurrentItems.length;
-    if (itemsLength > 0){
-      // allItems.unshift(nonCurrentItems[itemsLength - 1]);
-      if (itemsLength > 1){
-        // allItems.push(nonCurrentItems[0]);
-        if (itemsLength > 2){
-          // allItems.unshift(nonCurrentItems[itemsLength - 2]);
-          if (itemsLength > 4){
-            // allItems.push(nonCurrentItems[1]);
-          }
-        }
-      }
-    }
 
     return list.map((value) => {
       const isActive = value.index === props.index;

@@ -10,7 +10,6 @@ const Slide = ({ ...props }) => {
 
   const styles = {
     backgroundImage: `url(${props.properties.imageUrl})`,
-    // order: props.properties.index,
     transform: `translateX(${translateValue}%)`
   };
 
