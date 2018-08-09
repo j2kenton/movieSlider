@@ -33,7 +33,7 @@ const NavBar = ({ ...props }) => {
       }
     }
 
-    return allItems.map((value) => {
+    return props.data.map((value) => {
       const isActive = value.index === props.index;
       let orderValue = value.index;
       if (value.index < (props.index - 2)){
@@ -44,12 +44,12 @@ const NavBar = ({ ...props }) => {
       }
       const className = (isActive) ? "active" : "inactive";
 
-      const translateValue = (props.index) * -20;
+      const translateValue = (props.index) * -100;
 
       const styles = {
         transform: `translateX(${translateValue}%)`,
         // order: orderValue
-      };  
+      };
 
       return (
         <div key={value.index} className={className} onClick={() => setIndex(value.index)} style={styles}>{value.name}</div>
