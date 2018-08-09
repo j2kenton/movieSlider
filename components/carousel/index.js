@@ -5,7 +5,15 @@ import Slide from './../slide';
 const Carousel = ({ ...props }) => {
 
   const list = props.data;
-
+  
+  const setIndex = (index) => {
+    props.onChange(index);
+  };
+  
+  const incrementIndex = (increment) => {
+    const newIndex = (props.index + increment + props.data.length) % props.data.length;
+    setIndex(newIndex);
+  };
 
   const renderSlides = (props) => {
 
@@ -18,7 +26,7 @@ const Carousel = ({ ...props }) => {
       const isActive = value.index === props.index;
       const className = (isActive) ? "active" : "inactive";
       return (
-        <Slide key={value.index} properties={value} overallIndex={props.index} />
+        <Slide key={value.index} properties={value} overallIndex={props.index} onChange={incrementIndex} />
       )
     })
   };

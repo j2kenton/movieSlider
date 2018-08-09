@@ -10,7 +10,7 @@ const DetailsSection = ({ ...props }) => {
   // }
 
   return (
-    <div class="detailsSection">
+    <div className="detailsSection">
       <h2>{props.properties.name}</h2>
       <hr/>
       <h3>{props.properties.release}</h3>

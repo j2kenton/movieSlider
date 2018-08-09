@@ -159,3 +159,19 @@ nav > div {
   bottom: 10%;
   left: 10%;
 }
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 200%;
+  color: #ffffff;
+}
+
+.arrow.left {
+  left: 2%;
+}
+
+.arrow.right {
+  right: 2%;
+}
