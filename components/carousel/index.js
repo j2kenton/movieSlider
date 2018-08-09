@@ -9,11 +9,28 @@ const Carousel = ({ ...props }) => {
   const setIndex = (index) => {
     props.onChange(index);
   };
-  
+
+  let incrementTimer;
+
+  const clearTimer = () => {
+    clearInterval(incrementTimer);
+  };
+
+  const clearTimer2 = () => {
+    clearInterval(incrementTimer);
+  };
+
   const incrementIndex = (increment) => {
     const newIndex = (props.index + increment + props.data.length) % props.data.length;
     setIndex(newIndex);
+    clearTimer();
   };
+
+  const triggerTimedIncrement = () => {
+    clearTimer();
+    incrementTimer = setInterval(()=> incrementIndex(1), 10000);
+  };
+  triggerTimedIncrement();
 
   const renderSlides = (props) => {
 
@@ -26,35 +43,12 @@ const Carousel = ({ ...props }) => {
       const isActive = value.index === props.index;
       const className = (isActive) ? "active" : "inactive";
       return (
-        <Slide key={value.index} properties={value} overallIndex={props.index} onChange={incrementIndex} />
+        <Slide key={value.index} properties={value} overallIndex={props.index} onChange={incrementIndex} onMouseOver={clearTimer2}
+               onClick={clearTimer2}
+        />
       )
     })
   };
-  
-
-/*
-  const goToNextSlide = () => {
-    // const { images, index, translateValue, setTranslateValue, setIndex } = this.props
-    // const index = props.position;
-    // const 
-    // if(props.position === list.length - 1) {
-    //   setTranslateValue(0)
-    //   return setIndex(0)
-    // }
-    // setTranslateValue(translateValue - this.slideWidth())
-    props.setIndex(props.position + 1)
-  }
-*/
-/*
-
-  const Slides = list.map((value, key) => {
-    const isActive = key === props.index;
-    const className = (isActive) ? "active" : "inactive";
-    return (
-      <Slide properties={value} className={className}></Slide>
-    )
-  });
-*/
 
   return (
     <div {...props} className="carousel" >
