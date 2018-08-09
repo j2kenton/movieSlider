@@ -4,8 +4,8 @@ import navBar from './../../hocs/navBar';
 const NavBar = ({ ...props }) => {
 
   const setIndex = (index) => {
-    props.onChange(index)
-  }
+    props.onChange(index);
+  };
 
   const renderNavItems = (props) => {
 

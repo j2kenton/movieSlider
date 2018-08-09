@@ -5,10 +5,43 @@ import Slide from './../slide';
 const Carousel = ({ ...props }) => {
 
   const list = props.data;
+
+
+  const renderSlides = (props) => {
+
+    let list = props.data.slice();
+    list.forEach(function(item, index){
+      item.index = index;
+    });
+    // we need up to 5 items, with the current one in the middle
+    const currentItem = list[props.index];
+    const previousItems = list.slice(0, props.index);
+    const nextItems = list.slice(props.index + 1, list.length);
+    let nonCurrentItems = nextItems.concat(previousItems);
+    let allItems = [currentItem];
+    const itemsLength = nonCurrentItems.length;
+    if (itemsLength > 0){
+      allItems.unshift(nonCurrentItems[itemsLength - 1]);
+      if (itemsLength > 1){
+        allItems.push(nonCurrentItems[0]);
+        if (itemsLength > 2){
+          allItems.unshift(nonCurrentItems[itemsLength - 2]);
+          if (itemsLength > 4){
+            allItems.push(nonCurrentItems[1]);
+          }
+        }
+      }
+    }
+
+    return allItems.map((value) => {
+      const isActive = value.index === props.index;
+      const className = (isActive) ? "active" : "inactive";
+      return (
+        <Slide key={value.index} properties={value} />
+      )
+    })
+  };
   
-  const renderSlides = () => (
-    list.map((value, key) => <Slide properties={value} key={key} /> )
-  )
 
 /*
   const goToNextSlide = () => {
@@ -37,7 +70,7 @@ const Carousel = ({ ...props }) => {
   return (
     <div {...props} className="carousel" >
       {
-        renderSlides()
+        renderSlides(props)
       }
     </div>
   );
