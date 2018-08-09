@@ -33,7 +33,7 @@ const NavBar = ({ ...props }) => {
       }
     }
 
-    return allItems.map((value) => {
+    return props.data.map((value) => {
       const isActive = value.index === props.index;
       const className = (isActive) ? "active" : "inactive";
 

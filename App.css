@@ -30,12 +30,6 @@ html, body, #root {
   padding: 0;
 }
 
-.carousel {
-  height: 300px;
-  background-color: white;
-  position: relative;
-  width: 100%;
-}
 
 nav {
   background-color: black;
@@ -45,6 +39,29 @@ nav {
   align-items: stretch;
   align-content: space-between;
   overflow-x: hidden;
+
+
+
+  /*display: -ms-flexbox;*/
+  /*display: -webkit-flex;*/
+  /*display: flex;*/
+  /*-webkit-flex-direction: row;*/
+  /*-ms-flex-direction: row;*/
+  /*flex-direction: row;*/
+  /*-webkit-flex-wrap: nowrap;*/
+  /*-ms-flex-wrap: nowrap;*/
+  /*flex-wrap: nowrap;*/
+  /*-webkit-justify-content: flex-start;*/
+  /*-ms-flex-pack: start;*/
+  /*justify-content: flex-start;*/
+  /*-webkit-align-content: stretch;*/
+  /*-ms-flex-line-pack: stretch;*/
+  /*align-content: stretch;*/
+  /*-webkit-align-items: stretch;*/
+  /*-ms-flex-align: stretch;*/
+  /*align-items: stretch;*/
+
+
 }
 
 nav .navItem {
@@ -55,11 +72,33 @@ nav .navItem {
   color: yellow;
 }
 
+
+.carousel {
+  height: 300px;
+  background-color: white;
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  position: relative;
+  left: -300%;
+  flex-direction: row;
+  list-style-type: none;
+  transform: translateX(100%);
+}
+
 .slide {
   height: 100%;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+
+
+  flex: 1 0 100%;
+  /*background-repeat: no-repeat;*/
+  /*background-size: cover;*/
+  background-position: center;
+
   /*background-position: 50% 60%;*/
 }
 

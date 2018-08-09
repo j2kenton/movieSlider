@@ -10,7 +10,7 @@ export default function slide(WrappedComponent) {
     static displayName = `Slide(${WrappedComponent.name})`;
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
-      // return nextContext._errors !== this.context._errors;
+      return Number.isInteger(nextProps.index) && (nextProps.index > -1) && (nextProps.index < this.props.data.length) && (this.props.index !== nextProps.index);
     }
 
     render() {

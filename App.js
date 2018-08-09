@@ -10,6 +10,10 @@ import dataSet from './moviesList.json'
 
 
 
+
+
+
+
 class Registration extends Component {
 
   constructor() {
