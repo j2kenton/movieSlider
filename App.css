@@ -124,6 +124,8 @@ nav > div {
 
 .active {
   color: #ffffff;
+  margin-left: 50%;
+  /*transform: translateX(-50%) !important;*/
 }
 
 .inactive {
