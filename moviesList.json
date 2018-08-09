@@ -13,11 +13,15 @@
 	"release": "out now"
 }, {
 	"name": "The Matrix",
-	"imageUrl": "",
+	"imageUrl": "https://metrouk2.files.wordpress.com/2017/02/the-matrix.jpg?quality=80&strip=all&strip=all",
 	"release": "out now"
 }, {
 	"name": "Ocean's Eleven",
-	"imageUrl": "",
+	"imageUrl": "https://dz7u9q3vpd4eo.cloudfront.net/wp-content/legacy/posts/b6b7d8a4-21f1-4c52-a66b-e3ac606372a2.jpeg",
+	"release": "out now"
+}, {
+	"name": "Signs",
+	"imageUrl": "https://etchedinstone.org/wp-content/uploads/2018/03/maxresdefault.jpg",
 	"release": "out now"
 }
 ]

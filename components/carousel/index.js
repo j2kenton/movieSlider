@@ -12,9 +12,25 @@ const Carousel = ({ ...props }) => {
     list.map((value, key) => <Slide properties={value} /> )
   )
 
+
+  const goToNextSlide = () => {
+    // const { images, index, translateValue, setTranslateValue, setIndex } = this.props
+    // const index = props.position;
+    // const 
+    // if(props.position === list.length - 1) {
+    //   setTranslateValue(0)
+    //   return setIndex(0)
+    // }
+    // setTranslateValue(translateValue - this.slideWidth())
+    props.setIndex(props.position + 1)
+  }
+
+
   const Slides = list.map((value, key) => {
+    const isActive = key === props.index;
+    const className = (isActive) ? "active" : "inactive";
     return (
-      <Slide properties={value}></Slide>
+      <Slide properties={value} className={className}></Slide>
     )
   });
 
