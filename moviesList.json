@@ -1,6 +1,10 @@
 [{
+  "name": "Despicable Me",
+  "imageUrl": "https://i.kym-cdn.com/entries/icons/original/000/015/162/18-despicable-me-2-animation-movie.jpg",
+  "release": "out now"
+}, {
 	"name": "Lord of the Rings",
-	"imageUrl": "https://vignette.wikia.nocookie.net/lotr/images/3/3a/The_Lord_of_the_Rings_Characters.jpg/revision/latest?cb=20150328111911",
+	"imageUrl": "https://www.slashfilm.com/wp/wp-content/images/lord-of-the-rings-tv-show.jpg",
 	"release": "out now"
 }, {
 	"name": "Lethal Weapon",
@@ -22,6 +26,10 @@
 }, {
 	"name": "Signs",
 	"imageUrl": "https://etchedinstone.org/wp-content/uploads/2018/03/maxresdefault.jpg",
+	"release": "out now"
+}, {
+	"name": "Hoodwinked",
+	"imageUrl": "http://akirakurosawa.info/wp-content/uploads/2015/10/hoodwinked.jpg",
 	"release": "out now"
 }
 ]
