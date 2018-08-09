@@ -1,18 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import carousel from './../../hocs/carousel';
 import Slide from './../slide';
-import axios from 'axios'
+// import axios from 'axios'
 
 const Carousel = ({ ...props }) => {
 
   const list = props.data;
   
   const renderSlides = () => (
-    list.map((value, key) => <Slide properties={value} /> )
+    list.map((value, key) => <Slide properties={value} key={key} /> )
   )
 
-
+/*
   const goToNextSlide = () => {
     // const { images, index, translateValue, setTranslateValue, setIndex } = this.props
     // const index = props.position;
@@ -24,7 +24,8 @@ const Carousel = ({ ...props }) => {
     // setTranslateValue(translateValue - this.slideWidth())
     props.setIndex(props.position + 1)
   }
-
+*/
+/*
 
   const Slides = list.map((value, key) => {
     const isActive = key === props.index;
@@ -33,6 +34,7 @@ const Carousel = ({ ...props }) => {
       <Slide properties={value} className={className}></Slide>
     )
   });
+*/
 
   return (
     <div {...props} className="carousel" >
@@ -44,7 +46,7 @@ const Carousel = ({ ...props }) => {
 };
 
 Carousel.contextTypes = {
-  hasErrors: PropTypes.bool
+  // hasErrors: PropTypes.bool
 };
 
 export default carousel(Carousel);

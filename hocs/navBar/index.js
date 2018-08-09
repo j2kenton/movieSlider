@@ -10,6 +10,7 @@ export default function navBar(WrappedComponent) {
     static displayName = `NavBar(${WrappedComponent.name})`;
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
+      return Number.isInteger(nextProps.index) && (nextProps.index > -1) && (nextProps.index < this.props.data.length) && (this.props.index !== nextProps.index);
       // return nextContext._errors !== this.context._errors;
     }
 

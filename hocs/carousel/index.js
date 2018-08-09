@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import * as SliderActions from './../../actions'
-import axios from 'axios'
+// import * as SliderActions from './../../actions'
+// import axios from 'axios'
 
 
 export default function carousel(WrappedComponent) {

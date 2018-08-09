@@ -1,13 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import detailsSection from './../../hocs/detailsSection';
 
 const DetailsSection = ({ ...props }) => {
 
 
-  const styles = {
-    backgroundImage: `url(${props.properties.imageUrl})`
-  }
+  // const styles = {
+  //   backgroundImage: `url(${props.properties.imageUrl})`
+  // }
 
   return (
     <div>
