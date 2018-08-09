@@ -56,5 +56,11 @@ nav .navItem {
 }
 
 .inactive {
-  color: white;
+  /*color: white;*/
+}
+
+nav > div {
+  color: yellow;
+  transform: translateX(30px);
+  transition: transform ease-out 0.45s;
 }

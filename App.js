@@ -18,17 +18,14 @@ class Registration extends Component {
   }
 
   positionCallback = (newPosition) => {
-    // this.index = dataFromChild;
     this.setState({position: newPosition})
-    console.log(this.setState)
-    console.log(this.state)
   }
 
   render() {
     return (
       <div>
         <header></header>
-        <Carousel data={this.DATA} index={this.POSITION} onChange={this.positionCallback} />
+        <Carousel data={this.DATA} index={this.state.position} onChange={this.positionCallback} />
         <NavBar data={this.DATA} index={this.state.position}  onChange={this.positionCallback} />
       </div>
     )
