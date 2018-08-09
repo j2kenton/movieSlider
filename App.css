@@ -22,10 +22,21 @@
 
 
 /*************************/
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .carousel {
   height: 300px;
   background-color: white;
+  position: relative;
+  width: 100%;
 }
+
 nav {
   background-color: black;
   height: 40px;
@@ -33,6 +44,7 @@ nav {
   justify-content: space-between;
   align-items: stretch;
   align-content: space-between;
+  overflow-x: hidden;
 }
 
 nav .navItem {
@@ -63,4 +75,19 @@ nav > div {
   color: yellow;
   transform: translateX(30px);
   transition: transform ease-out 0.45s;
+}
+
+.slide {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.45s ease-out;
+}
+
+#wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
 }

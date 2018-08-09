@@ -15,7 +15,7 @@ class Registration extends Component {
   constructor() {
     super();
     this.DATA = dataSet;
-    this.state = {position: 3};
+    this.state = {position: 0};
   }
 
   positionCallback = (newPosition) => {

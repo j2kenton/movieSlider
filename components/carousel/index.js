@@ -37,7 +37,7 @@ const Carousel = ({ ...props }) => {
       const isActive = value.index === props.index;
       const className = (isActive) ? "active" : "inactive";
       return (
-        <Slide key={value.index} properties={value} />
+        <Slide key={value.index} properties={value} overallIndex={props.index} />
       )
     })
   };
