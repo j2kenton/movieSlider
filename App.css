@@ -148,3 +148,11 @@ nav > div {
   overflow: hidden;
   white-space: nowrap;
 }
+
+.detailsSection {
+  color: #ffffff;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+}

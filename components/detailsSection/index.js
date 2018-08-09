@@ -10,8 +10,9 @@ const DetailsSection = ({ ...props }) => {
   // }
 
   return (
-    <div>
+    <div class="detailsSection">
       <h2>{props.properties.name}</h2>
+      <hr/>
       <h3>{props.properties.release}</h3>
     </div>
   );

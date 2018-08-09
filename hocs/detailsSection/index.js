@@ -10,7 +10,7 @@ export default function detailsSection(WrappedComponent) {
     static displayName = `DetailsSection(${WrappedComponent.name})`;
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
-      // return nextContext._errors !== this.context._errors;
+      return Number.isInteger(nextProps.overallIndex) && (nextProps.overallIndex > -1) && (this.props.overallIndex !== nextProps.overallIndex);
     }
 
     render() {
