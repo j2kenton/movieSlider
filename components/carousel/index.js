@@ -18,22 +18,22 @@ const Carousel = ({ ...props }) => {
     const previousItems = list.slice(0, props.index);
     const nextItems = list.slice(props.index + 1, list.length);
     let nonCurrentItems = nextItems.concat(previousItems);
-    let allItems = [currentItem];
+    // let allItems = [currentItem];
     const itemsLength = nonCurrentItems.length;
     if (itemsLength > 0){
-      allItems.unshift(nonCurrentItems[itemsLength - 1]);
+      // allItems.unshift(nonCurrentItems[itemsLength - 1]);
       if (itemsLength > 1){
-        allItems.push(nonCurrentItems[0]);
+        // allItems.push(nonCurrentItems[0]);
         if (itemsLength > 2){
-          allItems.unshift(nonCurrentItems[itemsLength - 2]);
+          // allItems.unshift(nonCurrentItems[itemsLength - 2]);
           if (itemsLength > 4){
-            allItems.push(nonCurrentItems[1]);
+            // allItems.push(nonCurrentItems[1]);
           }
         }
       }
     }
 
-    return allItems.map((value) => {
+    return list.map((value) => {
       const isActive = value.index === props.index;
       const className = (isActive) ? "active" : "inactive";
       return (

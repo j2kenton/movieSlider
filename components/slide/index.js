@@ -6,11 +6,12 @@ import DetailsSection from './../detailsSection';
 
 const Slide = ({ ...props }) => {
 
-  // const translateValue = (props.overallIndex + 2) * -100;
+  const translateValue = (props.overallIndex) * -100;
 
   const styles = {
     backgroundImage: `url(${props.properties.imageUrl})`,
-    // transform: `translateX(${translateValue}%)`
+    // order: props.properties.index,
+    transform: `translateX(${translateValue}%)`
   };
 
   return (

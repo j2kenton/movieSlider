@@ -81,7 +81,7 @@ nav .navItem {
 
   display: flex;
   position: relative;
-  left: -300%;
+  left: -100%;
   flex-direction: row;
   list-style-type: none;
   transform: translateX(100%);
