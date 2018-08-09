@@ -83,7 +83,10 @@ nav > div {
   flex-grow: 1;
   display: inline-block;
 
-  width: calc(100% * (1/5))
+  /*width: calc(100% * (1/5))*/
+
+  flex: 1 0 20%; /* explanation below */
+
 
 }
 
