@@ -121,17 +121,18 @@ nav > div {
 }
 
 .active {
-  color: red;
+  color: #ffffff;
 }
 
 .inactive {
-  /*color: white;*/
+  color: #666666;
 }
 
 nav > div {
-  color: yellow;
   transform: translateX(30px);
   transition: transform ease-out 0.45s;
+  text-transform: uppercase;
+  font-size: 70%;
 }
 
 .slide {
