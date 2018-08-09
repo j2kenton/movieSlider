@@ -1,8 +1,7 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import navBar from './../../hocs/navBar';
 
-const NavBar = ({ hasErrors, ...props }) => {
+const NavBar = ({ ...props }) => {
 
   const setIndex = (index) => {
     props.onChange(index)

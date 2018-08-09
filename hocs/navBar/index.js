@@ -11,12 +11,9 @@ export default function navBar(WrappedComponent) {
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
       return Number.isInteger(nextProps.index) && (nextProps.index > -1) && (nextProps.index < this.props.data.length) && (this.props.index !== nextProps.index);
-      // return nextContext._errors !== this.context._errors;
     }
 
     render() {
-      // const hasErrors = !!Object.keys(this.context._errors).length;
-
       return (
         <WrappedComponent {...this.props} />
       );

@@ -4,7 +4,6 @@ import NavBar from './components/navBar';
 
 // import logo from './jones-logo.png';
 import './App.css';
-// import axios from 'axios'
 
 import dataSet from './moviesList.json'
 

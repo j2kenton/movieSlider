@@ -1,8 +1,6 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import carousel from './../../hocs/carousel';
 import Slide from './../slide';
-// import axios from 'axios'
 
 const Carousel = ({ ...props }) => {
 
