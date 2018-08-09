@@ -34,12 +34,21 @@ html, body, #root {
 nav {
   background-color: black;
   height: 40px;
-  display: flex;
+  /*display: flex;*/
   justify-content: space-between;
   align-items: stretch;
   align-content: space-between;
   overflow-x: hidden;
 
+
+
+  display: flex;
+  position: relative;
+  left: -100%;
+  flex-direction: row;
+  list-style-type: none;
+  transform: translateX(100%);
+  /*margin:-10px 0 0 -10px;*/
 
 
   /*display: -ms-flexbox;*/
@@ -64,19 +73,25 @@ nav {
 
 }
 
-nav .navItem {
-  width: 220px;
+nav > div {
+  /*width: 220px;*/
   height: 100%;
   margin: auto;
-  background-color: pink;
+  /*background-color: pink;*/
   color: yellow;
+  /*flex: 1 0 100%;*/
+  flex-grow: 1;
+  display: inline-block;
+
+  width: calc(100% * (1/5))
+
 }
 
+/**************/
 
 .carousel {
-  height: 300px;
+  height: 400px;
   background-color: white;
-  position: relative;
   width: 100%;
 
   display: flex;
@@ -97,7 +112,7 @@ nav .navItem {
   flex: 1 0 100%;
   /*background-repeat: no-repeat;*/
   /*background-size: cover;*/
-  background-position: center;
+  /*background-position: center;*/
 
   /*background-position: 50% 60%;*/
 }
