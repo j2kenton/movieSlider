@@ -18,7 +18,7 @@ const Slide = ({ ...props }) => {
   };
 
   return (
-    <div className="slide" style={styles}>
+    <div className="slide" style={styles} onMouseEnter={props.mouseEnterHandler} onMouseLeave={props.mouseLeaveHandler} >
       <DetailsSection properties={props.properties} />
       <Arrow direction="left" onChange={incrementIndex} />
       <Arrow direction="right" onChange={incrementIndex} />

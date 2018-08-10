@@ -45,9 +45,9 @@ const Carousel = ({ ...props }) => {
           key={value.index} 
           properties={value} 
           overallIndex={props.index} 
-          onChange={incrementIndex} 
-          onMouseOver={clearTimer2}
-          onClick={clearTimer2}
+          onChange={incrementIndex}
+          mouseEnterHandler={clearTimer}
+          mouseLeaveHandler={triggerTimedIncrement}
         />
       )
     })
