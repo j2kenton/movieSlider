@@ -7,6 +7,7 @@ import Arrow from './../arrow';
 const Slide = ({ ...props }) => {
   
   const FULL_SHIFT_LEFT = -100;
+  const TRANSITION_DURATION = "900ms";
 
   const incrementIndex = (increment) => {
     props.onChange(increment);
@@ -17,7 +18,7 @@ const Slide = ({ ...props }) => {
   const styles = {
     backgroundImage: `url(${props.properties.imageUrl})`,
     transform: `translateX(${translateValue}%)`,
-    transitionDuration: '900ms'
+    transitionDuration: TRANSITION_DURATION
   };
 
   return (

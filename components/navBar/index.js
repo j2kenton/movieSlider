@@ -4,12 +4,13 @@ import navBar from './../../hocs/navBar';
 const NavBar = ({ ...props }) => {
 
   const NUMBER_OF_ITEMS = 5;
+  const TIMEOUT = 1000;
 
   const setIndex = (index) => {
     props.onChange(index);
     const timeoutId = setTimeout(function () {
       props.onStop();
-    }, 1000);
+    }, TIMEOUT);
   };
 
   const renderNavItems = (props) => {
@@ -44,7 +45,7 @@ const NavBar = ({ ...props }) => {
   const shiftForEachItem = itemWidth * props.index;
   const navShift = shiftForEachItem + windowWidth + shiftHalfItemWidth;
 
-  const duration = (props.moving) ? '900ms' : '0ms';
+  const duration = (props.moving) ? "900ms" : "0ms";
   
   const navStyles = {
     transform: `translateX(-${navShift}px)`,
