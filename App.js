@@ -20,18 +20,24 @@ class MovieSlider extends Component {
     };
   }
 
-  componentDidMount() {
-    this.setState({ isLoading: true });
-
-    axios.get(API + DEFAULT_QUERY)
-      .then(result => this.setState({
-        data: result.data,
+  getData = async () => {
+    try {
+      const response = await axios.get(API + DEFAULT_QUERY);
+      this.setState({
+        data: response.data,
         isLoading: false
-      }))
-      .catch(error => this.setState({
+      });
+    } catch (error) {
+      this.setState({
         error,
         isLoading: false
-      }));
+      });
+    }
+  };
+
+  componentDidMount() {
+    this.setState({ isLoading: true });
+    this.getData();
   }
 
   positionCallback = (newPosition) => {
