@@ -28,7 +28,7 @@ const Carousel = ({ ...props }) => {
 
   const triggerTimedIncrement = () => {
     clearTimer();
-    // incrementTimer = setInterval(()=> incrementIndex(1), 1000);
+    incrementTimer = setInterval(()=> incrementIndex(1), 10000);
   };
   triggerTimedIncrement();
 
