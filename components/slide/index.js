@@ -5,12 +5,14 @@ import DetailsSection from './../detailsSection';
 import Arrow from './../arrow';
 
 const Slide = ({ ...props }) => {
+  
+  const FULL_SHIFT_LEFT = -100;
 
   const incrementIndex = (increment) => {
     props.onChange(increment);
   };
 
-  const translateValue = (props.overallIndex) * -100;
+  const translateValue = (props.overallIndex) * FULL_SHIFT_LEFT;
 
   const styles = {
     backgroundImage: `url(${props.properties.imageUrl})`,

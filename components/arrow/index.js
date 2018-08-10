@@ -3,12 +3,22 @@ import arrow from './../../hocs/arrow';
 
 const Arrow = ({ ...props }) => {
 
+  const SHIFT_INCREMENTS = {
+    right: 1,
+    left: 1
+  };
+
+  const SYMBOLS = {
+    right: ">",
+    left: "<"
+  };
+
   const incrementIndex = (index) => {
     props.onChange(index);
   };
 
-  const symbol = (props.direction === "right") ? ">" : "<";
-  const increment = (props.direction === "right") ? 1 : -1;
+  const symbol = SYMBOLS[props.direction] || SYMBOLS.right;
+  const increment = SHIFT_INCREMENTS[props.direction] || SHIFT_INCREMENTS.right;
 
   return (
     <div className={`arrow ${props.direction}`} onClick={() => incrementIndex(increment)} >

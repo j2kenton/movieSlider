@@ -4,6 +4,9 @@ import Slide from './../slide';
 
 const Carousel = ({ ...props }) => {
 
+  const SCROLL_INTERVAL = 10000;
+  const SCROLL_INCREMENT = 1;
+
   const setIndex = (index) => {
     props.onChange(index);
   };
@@ -24,7 +27,7 @@ const Carousel = ({ ...props }) => {
 
   const triggerTimedIncrement = () => {
     clearTimer();
-    incrementTimer = setInterval(()=> incrementIndex(1), 10000);
+    incrementTimer = setInterval(()=> incrementIndex(SCROLL_INCREMENT), SCROLL_INTERVAL);
   };
   triggerTimedIncrement();
 

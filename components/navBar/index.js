@@ -3,6 +3,8 @@ import navBar from './../../hocs/navBar';
 
 const NavBar = ({ ...props }) => {
 
+  const NUMBER_OF_ITEMS = 5;
+
   const setIndex = (index) => {
     props.onChange(index);
   };
@@ -31,7 +33,7 @@ const NavBar = ({ ...props }) => {
 
   // need to shift to central set of elements (so we have plenty of items on each side of us at all times)
   const windowWidth = window.innerWidth;
-  const itemWidth = windowWidth / 5;
+  const itemWidth = windowWidth / NUMBER_OF_ITEMS;
   // center by accounting for width of the (active and centered) item
   const shiftHalfItemWidth = (itemWidth / 2);
   // shift to correct position, so that active item is centered

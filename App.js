@@ -8,7 +8,7 @@ class MovieSlider extends Component {
 
   constructor() {
     super();
-    this.DATA = dataSet;
+    this.data = dataSet;
     this.state = {position: 0};
   }
 
@@ -19,8 +19,8 @@ class MovieSlider extends Component {
   render() {
     return (
       <div>
-        <Carousel data={this.DATA} index={this.state.position} onChange={this.positionCallback} />
-        <NavBar data={this.DATA} index={this.state.position}  onChange={this.positionCallback} />
+        <Carousel data={this.data} index={this.state.position} onChange={this.positionCallback} />
+        <NavBar data={this.data} index={this.state.position}  onChange={this.positionCallback} />
       </div>
     )
   }
