@@ -10,7 +10,9 @@ export default function carousel(WrappedComponent) {
     static displayName = `Carousel(${WrappedComponent.name})`;
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
-      return Number.isInteger(nextProps.index) && (nextProps.index > -1) && (nextProps.index < this.props.data.length) && (this.props.index !== nextProps.index);
+      const isIndexValid = Number.isInteger(nextProps.index) && (nextProps.index > -1) && (nextProps.index < this.props.data.length);
+      const isIndexChanged = (this.props.index !== nextProps.index);
+      return isIndexValid && isIndexChanged;
     }
 
     render() {
