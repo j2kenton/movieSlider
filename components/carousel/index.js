@@ -4,8 +4,6 @@ import Slide from './../slide';
 
 const Carousel = ({ ...props }) => {
 
-  const list = props.data;
-  
   const setIndex = (index) => {
     props.onChange(index);
   };
@@ -21,7 +19,9 @@ const Carousel = ({ ...props }) => {
   };
 
   const incrementIndex = (increment) => {
-    const newIndex = (props.index + increment + props.data.length) % props.data.length;
+    const shiftForNegativeValues = props.data.length; // e.g. shift `-1` to `props.data.length - 1`
+    const currentIndex = props.index;
+    const newIndex = (currentIndex + increment + shiftForNegativeValues) % props.data.length;
     setIndex(newIndex);
     clearTimer();
   };
@@ -40,8 +40,6 @@ const Carousel = ({ ...props }) => {
     });
 
     return list.map((value) => {
-      const isActive = value.index === props.index;
-      const className = (isActive) ? "active" : "inactive";
       return (
         <Slide 
           key={value.index} 

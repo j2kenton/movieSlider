@@ -8,7 +8,6 @@ const Arrow = ({ ...props }) => {
   };
 
   const symbol = (props.direction === "right") ? ">" : "<";
-  
   const increment = (props.direction === "right") ? 1 : -1;
 
   return (

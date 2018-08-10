@@ -1,17 +1,8 @@
 import React, { Component } from 'react';
 import Carousel from './components/carousel';
 import NavBar from './components/navBar';
-
-// import logo from './jones-logo.png';
 import './App.css';
-
 import dataSet from './moviesList.json'
-
-
-
-
-
-
 
 class MovieSlider extends Component {
 
@@ -23,7 +14,7 @@ class MovieSlider extends Component {
 
   positionCallback = (newPosition) => {
     this.setState({position: newPosition})
-  }
+  };
 
   render() {
     return (

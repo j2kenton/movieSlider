@@ -16,14 +16,8 @@ const NavBar = ({ ...props }) => {
     let listWithDuplicates = list.concat(list, list);
 
     return listWithDuplicates.map((value) => {
+
       const isActive = value.index === props.index;
-      let orderValue = value.index;
-      if (value.index < (props.index - 2)){
-        orderValue += 1000;
-      }
-      if (value.index > (props.index + 2)){
-        orderValue -= 1000;
-      }
       const className = (isActive) ? "active" : "inactive";
 
       return (
@@ -31,6 +25,7 @@ const NavBar = ({ ...props }) => {
           <span className="navText">{value.name}</span>
         </div>
       )
+
     })
   };
 

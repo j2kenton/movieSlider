@@ -20,8 +20,8 @@ const Slide = ({ ...props }) => {
   return (
     <div className="slide" style={styles}>
       <DetailsSection properties={props.properties} />
-      <Arrow direction="left" onChange={incrementIndex}/>
-      <Arrow direction="right" onChange={incrementIndex}/>
+      <Arrow direction="left" onChange={incrementIndex} />
+      <Arrow direction="right" onChange={incrementIndex} />
     </div>
   );
 };
