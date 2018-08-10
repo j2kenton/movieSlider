@@ -27,15 +27,22 @@ const NavBar = ({ ...props }) => {
       const className = (isActive) ? "active" : "inactive";
 
       return (
-        <div key={value.index} className={className} onClick={() => setIndex(value.index)} >{value.name}</div>
+        <div key={value.index} className={className} onClick={() => setIndex(value.index)} >
+          <span className="navText">{value.name}</span>
+        </div>
       )
     })
   };
 
+  // need to shift to central set of elements (so we have plenty of items on each side of us at all times)
   const windowWidth = window.innerWidth;
   const itemWidth = windowWidth / 5;
-  const navShift = (itemWidth * props.index) + windowWidth;
-  
+  // center by accounting for width of the (active and centered) item
+  const shiftHalfItemWidth = (itemWidth / 2);
+  // shift to correct position, so that active item is centered
+  const shiftForEachItem = itemWidth * props.index;
+  const navShift = shiftForEachItem + windowWidth + shiftHalfItemWidth;
+
   const navStyles = {
     transform: `translateX(-${navShift}px)`,
   };

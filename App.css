@@ -52,6 +52,13 @@ nav > div {
   text-transform: uppercase;
   font-size: 70%;
   cursor: pointer;
+  position: relative;
+}
+
+.navText {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 /**************/

@@ -10,6 +10,9 @@ import dataSet from './moviesList.json'
 
 
 
+
+
+
 class MovieSlider extends Component {
 
   constructor() {
