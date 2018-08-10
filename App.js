@@ -19,7 +19,6 @@ class MovieSlider extends Component {
   render() {
     return (
       <div>
-        <header></header>
         <Carousel data={this.DATA} index={this.state.position} onChange={this.positionCallback} />
         <NavBar data={this.DATA} index={this.state.position}  onChange={this.positionCallback} />
       </div>

@@ -14,10 +14,6 @@ const Carousel = ({ ...props }) => {
     clearInterval(incrementTimer);
   };
 
-  const clearTimer2 = () => {
-    clearInterval(incrementTimer);
-  };
-
   const incrementIndex = (increment) => {
     const shiftForNegativeValues = props.data.length; // e.g. shift `-1` to `props.data.length - 1`
     const currentIndex = props.index;
