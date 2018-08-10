@@ -28,7 +28,7 @@ const Carousel = ({ ...props }) => {
 
   const triggerTimedIncrement = () => {
     clearTimer();
-    incrementTimer = setInterval(()=> incrementIndex(1), 10000);
+    // incrementTimer = setInterval(()=> incrementIndex(1), 1000);
   };
   triggerTimedIncrement();
 
@@ -43,8 +43,13 @@ const Carousel = ({ ...props }) => {
       const isActive = value.index === props.index;
       const className = (isActive) ? "active" : "inactive";
       return (
-        <Slide key={value.index} properties={value} overallIndex={props.index} onChange={incrementIndex} onMouseOver={clearTimer2}
-               onClick={clearTimer2}
+        <Slide 
+          key={value.index} 
+          properties={value} 
+          overallIndex={props.index} 
+          onChange={incrementIndex} 
+          onMouseOver={clearTimer2}
+          onClick={clearTimer2}
         />
       )
     })

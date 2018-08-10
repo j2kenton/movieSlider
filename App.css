@@ -33,63 +33,33 @@ html, body, #root {
   background-color: #000000;
 }
 
+/*************************/
 
 nav {
   background-color: black;
   height: 40px;
-  /*display: flex;*/
-  justify-content: space-between;
-  align-items: stretch;
-  align-content: space-between;
-  overflow-x: hidden;
-
-
+  /*justify-content: space-between;*/
+  /*align-items: stretch;*/
+  /*align-content: space-between;*/
+  /*overflow-x: hidden;*/
+  transition-duration: 600ms;
 
   display: flex;
-  position: relative;
-  left: -100%;
-  flex-direction: row;
-  list-style-type: none;
-  transform: translateX(100%);
-  /*margin:-10px 0 0 -10px;*/
-
-
-  /*display: -ms-flexbox;*/
-  /*display: -webkit-flex;*/
-  /*display: flex;*/
-  /*-webkit-flex-direction: row;*/
-  /*-ms-flex-direction: row;*/
+  /*position: relative;*/
   /*flex-direction: row;*/
-  /*-webkit-flex-wrap: nowrap;*/
-  /*-ms-flex-wrap: nowrap;*/
-  /*flex-wrap: nowrap;*/
-  /*-webkit-justify-content: flex-start;*/
-  /*-ms-flex-pack: start;*/
-  /*justify-content: flex-start;*/
-  /*-webkit-align-content: stretch;*/
-  /*-ms-flex-line-pack: stretch;*/
-  /*align-content: stretch;*/
-  /*-webkit-align-items: stretch;*/
-  /*-ms-flex-align: stretch;*/
-  /*align-items: stretch;*/
-
-
+  list-style-type: none;
 }
 
 nav > div {
-  /*width: 220px;*/
   height: 100%;
-  margin: auto;
-  /*background-color: pink;*/
   color: yellow;
-  /*flex: 1 0 100%;*/
   flex-grow: 1;
   display: inline-block;
 
-  /*width: calc(100% * (1/5))*/
-
   flex: 1 0 20%; /* explanation below */
 
+  text-transform: uppercase;
+  font-size: 70%;
 
 }
 
@@ -125,7 +95,7 @@ nav > div {
 
 .active {
   color: #ffffff;
-  margin-left: 50%;
+  /*margin-right: -50%;*/
   /*transform: translateX(-50%) !important;*/
 }
 
@@ -133,12 +103,6 @@ nav > div {
   color: #666666;
 }
 
-nav > div {
-  transform: translateX(30px);
-  transition: transform ease-out 0.45s;
-  text-transform: uppercase;
-  font-size: 70%;
-}
 
 .slide {
   display: inline-block;
