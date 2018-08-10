@@ -5,7 +5,7 @@ const Arrow = ({ ...props }) => {
 
   const SHIFT_INCREMENTS = {
     right: 1,
-    left: 1
+    left: -1
   };
 
   const SYMBOLS = {
