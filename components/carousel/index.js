@@ -62,7 +62,6 @@ const Carousel = ({ ...props }) => {
 };
 
 Carousel.contextTypes = {
-  // hasErrors: PropTypes.bool
 };
 
 export default carousel(Carousel);

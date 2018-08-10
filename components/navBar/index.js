@@ -7,6 +7,9 @@ const NavBar = ({ ...props }) => {
 
   const setIndex = (index) => {
     props.onChange(index);
+    const timeoutId = setTimeout(function () {
+      props.onStop();
+    }, 1000);
   };
 
   const renderNavItems = (props) => {
@@ -20,7 +23,8 @@ const NavBar = ({ ...props }) => {
     return listWithDuplicates.map((value) => {
 
       const isActive = value.index === props.index;
-      const className = (isActive) ? "active" : "inactive";
+      let className = (isActive) ? "active" : "inactive";
+      className += " navItem";
 
       return (
         <div key={value.index} className={className} onClick={() => setIndex(value.index)} >
@@ -40,8 +44,11 @@ const NavBar = ({ ...props }) => {
   const shiftForEachItem = itemWidth * props.index;
   const navShift = shiftForEachItem + windowWidth + shiftHalfItemWidth;
 
+  const duration = (props.moving) ? '900ms' : '0ms';
+  
   const navStyles = {
     transform: `translateX(-${navShift}px)`,
+    transitionDuration: duration
   };
 
   return (
@@ -52,7 +59,6 @@ const NavBar = ({ ...props }) => {
 };
 
 NavBar.contextTypes = {
-  // hasErrors: PropTypes.bool
 };
 
 export default navBar(NavBar);

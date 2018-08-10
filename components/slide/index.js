@@ -16,7 +16,8 @@ const Slide = ({ ...props }) => {
 
   const styles = {
     backgroundImage: `url(${props.properties.imageUrl})`,
-    transform: `translateX(${translateValue}%)`
+    transform: `translateX(${translateValue}%)`,
+    transitionDuration: '900ms'
   };
 
   return (
@@ -29,7 +30,6 @@ const Slide = ({ ...props }) => {
 };
 
 Slide.contextTypes = {
-  // hasErrors: PropTypes.bool
 };
 
 export default slide(Slide);

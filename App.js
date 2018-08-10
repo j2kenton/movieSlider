@@ -9,18 +9,42 @@ class MovieSlider extends Component {
   constructor() {
     super();
     this.data = dataSet;
-    this.state = {position: 0};
+    this.state = {
+      position: 0,
+      moving: false
+    };
   }
 
   positionCallback = (newPosition) => {
-    this.setState({position: newPosition})
+    this.setState({
+      position: newPosition,
+      moving: true
+    });
+  };
+
+  movementCallback = () => {
+    this.setState({
+      moving: false
+    });
   };
 
   render() {
     return (
       <div>
-        <Carousel data={this.data} index={this.state.position} onChange={this.positionCallback} />
-        <NavBar data={this.data} index={this.state.position}  onChange={this.positionCallback} />
+        <Carousel
+          data={this.data}
+          index={this.state.position}
+          moving={this.state.moving}
+          onChange={this.positionCallback}
+          onStop={this.movementCallback}
+        />
+        <NavBar
+          data={this.data}
+          index={this.state.position}
+          moving={this.state.moving}
+          onChange={this.positionCallback}
+          onStop={this.movementCallback}
+        />
       </div>
     )
   }
