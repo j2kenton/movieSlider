@@ -13,7 +13,7 @@ const DetailsSection = ({ ...props }) => {
     <div className="detailsSection">
       <h2>{props.properties.name}</h2>
       <hr/>
-      <h3>{props.properties.release}</h3>
+      <h3>Released: {props.properties.release}</h3>
     </div>
   );
 };
