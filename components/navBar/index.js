@@ -8,7 +8,7 @@ const NavBar = ({ ...props }) => {
 
   const setIndex = (index) => {
     props.onChange(index);
-    const timeoutId = setTimeout(function () {
+    setTimeout(function () {
       props.onStop();
     }, TIMEOUT);
   };
