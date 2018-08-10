@@ -1,10 +1,10 @@
 import React from 'react';
 import navBar from './../../hocs/navBar';
 
-const NavBar = ({ ...props }) => {
+const NUMBER_OF_ITEMS = 5;
+const TIMEOUT = 1000;
 
-  const NUMBER_OF_ITEMS = 5;
-  const TIMEOUT = 1000;
+const NavBar = ({ ...props }) => {
 
   const setIndex = (index) => {
     props.onChange(index);

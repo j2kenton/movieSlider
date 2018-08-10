@@ -2,10 +2,10 @@ import React from 'react';
 import carousel from './../../hocs/carousel';
 import Slide from './../slide';
 
-const Carousel = ({ ...props }) => {
+const SCROLL_INTERVAL = 10000;
+const SCROLL_INCREMENT = 1;
 
-  const SCROLL_INTERVAL = 10000;
-  const SCROLL_INCREMENT = 1;
+const Carousel = ({ ...props }) => {
 
   const setIndex = (index) => {
     props.onChange(index);

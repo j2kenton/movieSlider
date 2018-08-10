@@ -4,10 +4,10 @@ import slide from './../../hocs/slide';
 import DetailsSection from './../detailsSection';
 import Arrow from './../arrow';
 
+const FULL_SHIFT_LEFT = -100;
+const TRANSITION_DURATION = "900ms";
+
 const Slide = ({ ...props }) => {
-  
-  const FULL_SHIFT_LEFT = -100;
-  const TRANSITION_DURATION = "900ms";
 
   const incrementIndex = (increment) => {
     props.onChange(increment);
