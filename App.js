@@ -10,23 +10,7 @@ import dataSet from './moviesList.json'
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-class Registration extends Component {
+class MovieSlider extends Component {
 
   constructor() {
     super();
@@ -52,7 +36,7 @@ class Registration extends Component {
 export default function App() {
   return (
     <div id="wrapper">
-      <Registration/>
+      <MovieSlider/>
     </div>
   )
 }
