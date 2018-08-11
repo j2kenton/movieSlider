@@ -4,14 +4,9 @@ import detailsSection from './../../hocs/detailsSection';
 
 const DetailsSection = ({ ...props }) => {
 
-
-  // const styles = {
-  //   backgroundImage: `url(${props.properties.imageUrl})`
-  // }
-
   return (
     <div className="detailsSection">
-      <h2>{props.properties.name}</h2>
+      <h1 class="detailsHeading">{props.properties.name}</h1>
       <hr/>
       <h3>Released: {props.properties.release}</h3>
     </div>
@@ -19,7 +14,6 @@ const DetailsSection = ({ ...props }) => {
 };
 
 DetailsSection.contextTypes = {
-  // hasErrors: PropTypes.bool
 };
 
 export default detailsSection(DetailsSection);

@@ -1,5 +1,6 @@
 import React from 'react';
 import arrow from './../../hocs/arrow';
+import MaterialIcon, {colorPalette} from 'material-icons-react';
 
 const Arrow = ({ ...props }) => {
 
@@ -8,21 +9,15 @@ const Arrow = ({ ...props }) => {
     left: -1
   };
 
-  const SYMBOLS = {
-    right: ">",
-    left: "<"
-  };
-
   const incrementIndex = (index) => {
     props.onChange(index);
   };
 
-  const symbol = SYMBOLS[props.direction] || SYMBOLS.right;
   const increment = SHIFT_INCREMENTS[props.direction] || SHIFT_INCREMENTS.right;
 
   return (
     <div className={`arrow ${props.direction}`} onClick={() => incrementIndex(increment)} >
-      <i>{symbol}</i>
+      <MaterialIcon icon={`keyboard_arrow_${props.direction}`} invert />
     </div>
   );
 };
