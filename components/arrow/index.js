@@ -9,8 +9,8 @@ const Arrow = ({ ...props }) => {
     left: -1
   };
 
-  const incrementIndex = (index) => {
-    props.onChange(index);
+  const incrementIndex = (increment) => {
+    props.onChange(increment);
   };
 
   const increment = SHIFT_INCREMENTS[props.direction] || SHIFT_INCREMENTS.right;
