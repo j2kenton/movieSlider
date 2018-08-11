@@ -16,9 +16,10 @@ export default function carousel(WrappedComponent) {
     }
 
     render() {
-
+      const now = new Date();
+      const timestamp = now.getTime();
       return (
-        <WrappedComponent {...this.props} />
+        <WrappedComponent {...this.props} updateTime={timestamp} />
       );
     }
   };

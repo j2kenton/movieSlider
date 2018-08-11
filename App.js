@@ -42,6 +42,7 @@ class MovieSlider extends Component {
   positionCallback = (newPosition) => {
     this.setState({
       position: newPosition,
+      timestamp: Date.now()
     });
   };
 
@@ -53,6 +54,7 @@ class MovieSlider extends Component {
             data={this.state.data}
             index={this.state.position}
             onChange={this.positionCallback}
+            timestamp={this.state.timestamp}
           />
           <NavBar
             data={this.state.data}

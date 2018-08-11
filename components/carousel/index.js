@@ -18,11 +18,19 @@ const Carousel = ({ ...props }) => {
   };
 
   const incrementIndex = (increment) => {
-    const shiftForNegativeValues = props.data.length; // e.g. shift `-1` to `props.data.length - 1`
-    const currentIndex = props.index;
-    const newIndex = (currentIndex + increment + shiftForNegativeValues) % props.data.length;
-    setIndex(newIndex);
-    clearTimer();
+    if (!incrementTimer) {
+      return false;
+    }
+    const now = new Date();
+    const timestamp = now.getTime();
+    const timeSinceLastUpdate = timestamp - props.timestamp;
+    if (timeSinceLastUpdate >= SCROLL_INTERVAL){
+      const shiftForNegativeValues = props.data.length; // e.g. shift `-1` to `props.data.length - 1`
+      const currentIndex = props.index;
+      const newIndex = (currentIndex + increment + shiftForNegativeValues) % props.data.length;
+      setIndex(newIndex);
+      clearTimer();
+    }
   };
 
   const triggerTimedIncrement = () => {
