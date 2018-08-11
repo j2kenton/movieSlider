@@ -3,10 +3,6 @@ import React, { Component } from 'react';
 export default function navBar(WrappedComponent) {
   return class extends Component {
 
-    constructor(props) {
-      super(props);      
-    }
-
     static displayName = `NavBar(${WrappedComponent.name})`;
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {

@@ -6,7 +6,7 @@ const DetailsSection = ({ ...props }) => {
 
   return (
     <div className="detailsSection">
-      <h1 class="detailsHeading">{props.properties.name}</h1>
+      <h1 className="detailsHeading">{props.properties.name}</h1>
       <hr/>
       <h3>Released: {props.properties.release}</h3>
     </div>

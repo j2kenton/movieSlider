@@ -1,6 +1,6 @@
 import React from 'react';
 import arrow from './../../hocs/arrow';
-import MaterialIcon, {colorPalette} from 'material-icons-react';
+import MaterialIcon from 'material-icons-react';
 
 const Arrow = ({ ...props }) => {
 
@@ -23,7 +23,6 @@ const Arrow = ({ ...props }) => {
 };
 
 Arrow.contextTypes = {
-  // hasErrors: PropTypes.bool
 };
 
 export default arrow(Arrow);

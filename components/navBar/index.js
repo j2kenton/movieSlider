@@ -11,20 +11,21 @@ const NavBar = ({ ...props }) => {
 
   const renderNavItems = (props) => {
 
-    let list = props.data.slice();
+    let list = props.data;
     list.forEach(function(item, index){
       item.index = index;
     });
+
     let listWithDuplicates = list.concat(list, list);
 
-    return listWithDuplicates.map((value) => {
+    return listWithDuplicates.map((value, arrayIndex) => {
 
       const isActive = value.index === props.index;
       let className = (isActive) ? "active" : "inactive";
       className += " navItem";
 
       return (
-        <div key={value.index} className={className} onClick={() => setIndex(value.index)} >
+        <div key={arrayIndex} className={className} onClick={() => setIndex(value.index)} >
           <span className="navText">{value.name}</span>
         </div>
       )

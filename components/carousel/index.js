@@ -32,12 +32,10 @@ const Carousel = ({ ...props }) => {
   triggerTimedIncrement();
 
   const renderSlides = (props) => {
-
     let list = props.data.slice();
     list.forEach(function(item, index){
       item.index = index;
     });
-
     return list.map((value) => {
       return (
         <Slide 

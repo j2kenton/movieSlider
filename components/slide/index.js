@@ -5,7 +5,6 @@ import DetailsSection from './../detailsSection';
 import Arrow from './../arrow';
 
 const FULL_SHIFT_LEFT = -100;
-const TRANSITION_DURATION = "900ms";
 
 const Slide = ({ ...props }) => {
 
@@ -17,8 +16,7 @@ const Slide = ({ ...props }) => {
 
   const styles = {
     backgroundImage: `url(${props.properties.imageUrl})`,
-    transform: `translateX(${translateValue}%)`,
-    transitionDuration: TRANSITION_DURATION
+    transform: `translateX(${translateValue}%)`
   };
 
   return (

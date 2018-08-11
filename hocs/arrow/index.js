@@ -1,9 +1,8 @@
- import React, { Component } from 'react';
+import React, { Component } from 'react';
 
 export default function arrow(WrappedComponent) {
   return class extends Component {
     static contextTypes = {
-      // _errors: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object, PropTypes.string]))
     };
 
     static displayName = `Arrow(${WrappedComponent.name})`;
@@ -13,8 +12,6 @@ export default function arrow(WrappedComponent) {
     }
 
     render() {
-      // const hasErrors = !!Object.keys(this.context._errors).length;
-
       return (
         <WrappedComponent {...this.props} />
       );
