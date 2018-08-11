@@ -14,7 +14,7 @@ const Carousel = ({ ...props }) => {
   let incrementTimer;
 
   const clearTimer = () => {
-    clearInterval(incrementTimer);
+    clearTimeout(incrementTimer);
   };
 
   const incrementIndex = (increment) => {
@@ -27,7 +27,7 @@ const Carousel = ({ ...props }) => {
 
   const triggerTimedIncrement = () => {
     clearTimer();
-    incrementTimer = setInterval(()=> incrementIndex(SCROLL_INCREMENT), SCROLL_INTERVAL);
+    incrementTimer = setTimeout(()=> incrementIndex(SCROLL_INCREMENT), SCROLL_INTERVAL);
   };
   triggerTimedIncrement();
 
