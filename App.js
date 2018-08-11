@@ -15,7 +15,6 @@ class MovieSlider extends Component {
       isLoading: false,
       error: null,
       position: 0,
-      moving: false,
       data: []
     };
   }
@@ -43,13 +42,6 @@ class MovieSlider extends Component {
   positionCallback = (newPosition) => {
     this.setState({
       position: newPosition,
-      moving: true
-    });
-  };
-
-  movementCallback = () => {
-    this.setState({
-      moving: false
     });
   };
 
@@ -60,16 +52,12 @@ class MovieSlider extends Component {
           <Carousel
             data={this.state.data}
             index={this.state.position}
-            moving={this.state.moving}
             onChange={this.positionCallback}
-            onStop={this.movementCallback}
           />
           <NavBar
             data={this.state.data}
             index={this.state.position}
-            moving={this.state.moving}
             onChange={this.positionCallback}
-            onStop={this.movementCallback}
           />
         </div>
       )

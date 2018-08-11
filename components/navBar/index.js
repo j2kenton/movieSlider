@@ -2,15 +2,11 @@ import React from 'react';
 import navBar from './../../hocs/navBar';
 
 const NUMBER_OF_ITEMS = 5;
-const TIMEOUT = 1000;
 
 const NavBar = ({ ...props }) => {
 
   const setIndex = (index) => {
     props.onChange(index);
-    setTimeout(function () {
-      props.onStop();
-    }, TIMEOUT);
   };
 
   const renderNavItems = (props) => {
@@ -45,11 +41,8 @@ const NavBar = ({ ...props }) => {
   const shiftForEachItem = itemWidth * props.index;
   const navShift = shiftForEachItem + windowWidth + shiftHalfItemWidth;
 
-  const duration = (props.moving) ? "900ms" : "0ms";
-  
   const navStyles = {
     transform: `translateX(-${navShift}px)`,
-    transitionDuration: duration
   };
 
   return (
